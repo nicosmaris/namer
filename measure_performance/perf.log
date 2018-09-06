@@ -1,0 +1,182 @@
+Sending build context to Docker daemon  77.31kB
+Step 1/10 : FROM ruby:2.1
+2.1: Pulling from library/ruby
+Digest: sha256:568664cfb53cd74147590cc86e356c4e352e00e28a0011ea1443e8664ca5bad5
+Status: Image is up to date for ruby:2.1
+ ---> 223d1eaa9523
+Step 2/10 : ENV GEM_PATH /box
+ ---> Running in e91edb37bfd4
+Removing intermediate container e91edb37bfd4
+ ---> 6d38157954cc
+Step 3/10 : ENV GEM_HOME /box
+ ---> Running in fb87a79cfdf4
+Removing intermediate container fb87a79cfdf4
+ ---> 6e57bd315f20
+Step 4/10 : ENV BUNDLE_PATH /box
+ ---> Running in 297ae6457302
+Removing intermediate container 297ae6457302
+ ---> ac8e6e2784ef
+Step 5/10 : ENV NODE_PATH /box
+ ---> Running in 631205d5e2f7
+Removing intermediate container 631205d5e2f7
+ ---> e67dfc268a73
+Step 6/10 : RUN mkdir $BUNDLE_PATH
+ ---> Running in 6233b6b5f843
+Removing intermediate container 6233b6b5f843
+ ---> 009b11c43ad5
+Step 7/10 : RUN gem install bundler
+ ---> Running in 48bbdc4dc9ab
+Successfully installed bundler-1.16.4
+1 gem installed
+Removing intermediate container 48bbdc4dc9ab
+ ---> b479ed7192e8
+Step 8/10 : WORKDIR /src
+ ---> Running in cdaf35e8b674
+Removing intermediate container cdaf35e8b674
+ ---> 38cc5441882e
+Step 9/10 : CMD ["./entrypoint.sh"]
+ ---> Running in d3775e149935
+Removing intermediate container d3775e149935
+ ---> 6bb88bad9f2b
+Step 10/10 : EXPOSE 9292
+ ---> Running in 3666fb2571d9
+Removing intermediate container 3666fb2571d9
+ ---> bee9cc68f43f
+Successfully built bee9cc68f43f
+Successfully tagged my-image:latest
+IMAGE               CREATED                  CREATED BY                                      SIZE                COMMENT
+bee9cc68f43f        Less than a second ago   /bin/sh -c #(nop)  EXPOSE 9292                  0B
+6bb88bad9f2b        Less than a second ago   /bin/sh -c #(nop)  CMD ["./entrypoint.sh"]      0B
+38cc5441882e        1 second ago             /bin/sh -c #(nop) WORKDIR /src                  0B
+b479ed7192e8        1 second ago             /bin/sh -c gem install bundler                  1.71MB
+009b11c43ad5        3 seconds ago            /bin/sh -c mkdir $BUNDLE_PATH                   0B
+e67dfc268a73        5 seconds ago            /bin/sh -c #(nop)  ENV NODE_PATH=/box           0B
+ac8e6e2784ef        5 seconds ago            /bin/sh -c #(nop)  ENV BUNDLE_PATH=/box         0B
+6e57bd315f20        5 seconds ago            /bin/sh -c #(nop)  ENV GEM_HOME=/box            0B
+6d38157954cc        6 seconds ago            /bin/sh -c #(nop)  ENV GEM_PATH=/box            0B
+223d1eaa9523        14 months ago            /bin/sh -c #(nop)  CMD ["irb"]                  0B
+<missing>           14 months ago            /bin/sh -c mkdir -p "$GEM_HOME" "$BUNDLE_BIN…   0B
+<missing>           14 months ago            /bin/sh -c #(nop)  ENV PATH=/usr/local/bundl…   0B
+<missing>           14 months ago            /bin/sh -c #(nop)  ENV BUNDLE_PATH=/usr/loca…   0B
+<missing>           14 months ago            /bin/sh -c #(nop)  ENV GEM_HOME=/usr/local/b…   0B
+<missing>           14 months ago            /bin/sh -c gem install bundler --version "$B…   1.6MB
+<missing>           14 months ago            /bin/sh -c #(nop)  ENV BUNDLER_VERSION=1.15.1   0B
+<missing>           14 months ago            /bin/sh -c set -ex   && buildDeps='   bison …   111MB
+<missing>           14 months ago            /bin/sh -c #(nop)  ENV RUBYGEMS_VERSION=2.6.…   0B
+<missing>           14 months ago            /bin/sh -c #(nop)  ENV RUBY_DOWNLOAD_SHA256=…   0B
+<missing>           14 months ago            /bin/sh -c #(nop)  ENV RUBY_VERSION=2.1.10      0B
+<missing>           14 months ago            /bin/sh -c #(nop)  ENV RUBY_MAJOR=2.1           0B
+<missing>           14 months ago            /bin/sh -c mkdir -p /usr/local/etc  && {   e…   45B
+<missing>           14 months ago            /bin/sh -c set -ex;  apt-get update;  apt-ge…   319MB
+<missing>           14 months ago            /bin/sh -c apt-get update && apt-get install…   123MB
+<missing>           14 months ago            /bin/sh -c apt-get update && apt-get install…   44.6MB
+<missing>           14 months ago            /bin/sh -c #(nop)  CMD ["bash"]                 0B
+<missing>           14 months ago            /bin/sh -c #(nop) ADD file:9c48682ff75c75654…   123MB
+timestamp: starting my-container
+timestamp: started 'bundle install' at Thu Sep  6 13:53:08 UTC 2018
+Fetching gem metadata from https://rubygems.org/........
+Fetching backports 3.11.4
+Installing backports 3.11.4
+Using bundler 1.16.4
+Fetching concurrent-ruby 1.0.5
+Installing concurrent-ruby 1.0.5
+Fetching i18n 1.1.0
+Installing i18n 1.1.0
+Fetching faker 1.9.1
+Installing faker 1.9.1
+Fetching mini_portile2 2.3.0
+Installing mini_portile2 2.3.0
+Fetching multi_json 1.13.1
+Installing multi_json 1.13.1
+Fetching nokogiri 1.8.4
+Installing nokogiri 1.8.4 with native extensions
+Fetching rack 1.6.10
+Installing rack 1.6.10
+Fetching rack-protection 1.5.5
+Installing rack-protection 1.5.5
+Fetching rack-test 0.7.0
+Installing rack-test 0.7.0
+Fetching tilt 2.0.8
+Installing tilt 2.0.8
+Fetching sinatra 1.4.8
+Installing sinatra 1.4.8
+Fetching sinatra-contrib 1.4.7
+Installing sinatra-contrib 1.4.7
+Fetching sinatra-reloader 1.0
+Installing sinatra-reloader 1.0
+Bundle complete! 4 Gemfile dependencies, 15 gems now installed.
+Bundled gems are installed into `/box`
+timestamp: finished 'bundle install' at Thu Sep  6 13:54:02 UTC 2018
+stopping the container as the goal to measure build and run times and not to build and run a service...
+timestamp: stop and start my-container
+timestamp: started 'bundle install' at Thu Sep  6 13:54:03 UTC 2018
+Using backports 3.11.4
+Using bundler 1.16.4
+Using concurrent-ruby 1.0.5
+Using i18n 1.1.0
+Using faker 1.9.1
+Using mini_portile2 2.3.0
+Using multi_json 1.13.1
+Using nokogiri 1.8.4
+Using rack 1.6.10
+Using rack-protection 1.5.5
+Using rack-test 0.7.0
+Using tilt 2.0.8
+Using sinatra 1.4.8
+Using sinatra-contrib 1.4.7
+Using sinatra-reloader 1.0
+Bundle complete! 4 Gemfile dependencies, 15 gems now installed.
+Bundled gems are installed into `/box`
+timestamp: finished 'bundle install' at Thu Sep  6 13:54:03 UTC 2018
+stopping the container as the goal to measure build and run times and not to build and run a service...
+timestamp: stop, rm and run my-container
+my-container
+timestamp: started 'bundle install' at Thu Sep  6 13:54:04 UTC 2018
+Fetching gem metadata from https://rubygems.org/........
+Fetching backports 3.11.4
+Installing backports 3.11.4
+Using bundler 1.16.4
+Fetching concurrent-ruby 1.0.5
+Installing concurrent-ruby 1.0.5
+Fetching i18n 1.1.0
+Installing i18n 1.1.0
+Fetching faker 1.9.1
+Installing faker 1.9.1
+Fetching mini_portile2 2.3.0
+Installing mini_portile2 2.3.0
+Fetching multi_json 1.13.1
+Installing multi_json 1.13.1
+Fetching nokogiri 1.8.4
+Installing nokogiri 1.8.4 with native extensions
+Fetching rack 1.6.10
+Installing rack 1.6.10
+Fetching rack-protection 1.5.5
+Installing rack-protection 1.5.5
+Fetching rack-test 0.7.0
+Installing rack-test 0.7.0
+Fetching tilt 2.0.8
+Installing tilt 2.0.8
+Fetching sinatra 1.4.8
+Installing sinatra 1.4.8
+Fetching sinatra-contrib 1.4.7
+Installing sinatra-contrib 1.4.7
+Fetching sinatra-reloader 1.0
+Installing sinatra-reloader 1.0
+Bundle complete! 4 Gemfile dependencies, 15 gems now installed.
+Bundled gems are installed into `/box`
+timestamp: finished 'bundle install' at Thu Sep  6 13:54:51 UTC 2018
+stopping the container as the goal to measure build and run times and not to build and run a service...
+my-container
+Untagged: my-image:latest
+Deleted: sha256:bee9cc68f43f9177994cad82e53f19872c6536d62781d329dbd6f615fca10fec
+Deleted: sha256:6bb88bad9f2ba6a00e35ddc28e5da841507bc3a5a6c1f07f41e51a948a07b149
+Deleted: sha256:38cc5441882efd0a88bd715cff56e3dfdffd027cca4e8f69670ca4d03cd6d1e2
+Deleted: sha256:8b0264cc7444d75ed130ecf38a7e39ff82c76198dd8319baffd60d8d98f6c90d
+Deleted: sha256:b479ed7192e8364cd288a19e5cdebb0415c0f1a11505579bedb5f4b04edec8be
+Deleted: sha256:00c0edfeef97e63331f888bd70b4d022705c9685af5cd5546975cf4f848b8aed
+Deleted: sha256:009b11c43ad5cc6a591e70464aae938c357c0c8bd902748af019aeb134cf847b
+Deleted: sha256:66328e48761a45922649ab5d428bdce1d73c84ef8ef52d34fe11087188e06672
+Deleted: sha256:e67dfc268a73edddfab97c3abd80f512f5584d7582a5afc74cf1056725a0c27f
+Deleted: sha256:ac8e6e2784efe3e9e3dbc5b10d824943c98c2eac02779d10eceb31aa3cb35818
+Deleted: sha256:6e57bd315f2084cd722a3c0cf9c0392f295c8baafb396d02d81d3d021c20f603
+Deleted: sha256:6d38157954cc71f4d379b863ad0900096282832b20fbeef794858b56f1e19c98
