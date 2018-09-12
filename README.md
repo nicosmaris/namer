@@ -9,8 +9,8 @@ Also, it shows you how to cache rubygem dependencies when starting a stopped con
 Instructions:
 
 1. Make sure that you have ubuntu 16.04 and Docker engine preferrably 18.06.1-ce
-2. Run `./perf.sh` and store the output in a file like perf.log
-3. Check the output of `grep -A 10 IMAGE perf.log` like:
+2. Run perf pointing to a folder like `./perf.sh bundler` and store the output in a file like perf.log
+3. Check the output of `grep -A 10 IMAGE perf.log` like the following and find the small Dockerfile command by comparing each created time with the previous one (the next line below):
 
 ```text 
 IMAGE               CREATED                  CREATED BY                                      SIZE                COMMENT
@@ -26,7 +26,7 @@ ac8e6e2784ef        5 seconds ago            /bin/sh -c #(nop)  ENV BUNDLE_PATH=
 223d1eaa9523        14 months ago            /bin/sh -c #(nop)  CMD ["irb"]                  0B
 ```
 
-4. Check the output of `grep timestamp perf.log` like:
+4. Check the output of `grep timestamp perf.log` like the following and expect the second duration to be smaller than the first one below:
 
 ```text 
 timestamp: starting my-container
