@@ -12,6 +12,7 @@ Instructions:
 2. Run `./perf.sh` and store the output in a file like perf.log
 3. Check the output of `grep -A 10 IMAGE perf.log` like:
 
+```text 
 IMAGE               CREATED                  CREATED BY                                      SIZE                COMMENT
 bee9cc68f43f        Less than a second ago   /bin/sh -c #(nop)  EXPOSE 9292                  0B
 6bb88bad9f2b        Less than a second ago   /bin/sh -c #(nop)  CMD ["./entrypoint.sh"]      0B
@@ -23,9 +24,11 @@ ac8e6e2784ef        5 seconds ago            /bin/sh -c #(nop)  ENV BUNDLE_PATH=
 6e57bd315f20        5 seconds ago            /bin/sh -c #(nop)  ENV GEM_HOME=/box            0B
 6d38157954cc        6 seconds ago            /bin/sh -c #(nop)  ENV GEM_PATH=/box            0B
 223d1eaa9523        14 months ago            /bin/sh -c #(nop)  CMD ["irb"]                  0B
+```
 
 4. Check the output of `grep timestamp perf.log` like:
 
+```text 
 timestamp: starting my-container
 timestamp: started 'bundle install' at Thu Sep  6 13:53:08 UTC 2018
 timestamp: finished 'bundle install' at Thu Sep  6 13:54:02 UTC 2018
@@ -35,6 +38,7 @@ timestamp: finished 'bundle install' at Thu Sep  6 13:54:03 UTC 2018
 timestamp: stop, rm and run my-container
 timestamp: started 'bundle install' at Thu Sep  6 13:54:04 UTC 2018
 timestamp: finished 'bundle install' at Thu Sep  6 13:54:51 UTC 2018
+```
 
 ### Links
 
