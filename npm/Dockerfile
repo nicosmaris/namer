@@ -8,4 +8,3 @@ RUN mkdir /src
 WORKDIR /src
 
 CMD ["./entrypoint.sh"]
-EXPOSE 8080
