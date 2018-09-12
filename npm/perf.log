@@ -1,0 +1,103 @@
+Sending build context to Docker daemon  306.9MB
+Step 1/8 : FROM node:8
+8: Pulling from library/node
+Digest: sha256:acd0d53169592d955c1a668ba9685bf9cb6a1daf5adba000ad28f35108bf5fde
+Status: Image is up to date for node:8
+ ---> 6f62c0cdc461
+Step 2/8 : ENV NODE_PATH /box
+ ---> Running in 679bf5026048
+Removing intermediate container 679bf5026048
+ ---> f878b9c68bca
+Step 3/8 : ENV BUNDLE_PATH /box
+ ---> Running in f697cacce254
+Removing intermediate container f697cacce254
+ ---> 121ae312016f
+Step 4/8 : RUN mkdir $BUNDLE_PATH
+ ---> Running in 1c3545a6adc2
+Removing intermediate container 1c3545a6adc2
+ ---> 30ba0561d16c
+Step 5/8 : RUN mkdir /src
+ ---> Running in d1d97d6888d0
+Removing intermediate container d1d97d6888d0
+ ---> 95350e4054f5
+Step 6/8 : WORKDIR /src
+ ---> Running in 1188fc6044cc
+Removing intermediate container 1188fc6044cc
+ ---> cae31b1cfc90
+Step 7/8 : CMD ["./entrypoint.sh"]
+ ---> Running in 964b8bedec5c
+Removing intermediate container 964b8bedec5c
+ ---> a80616a080a2
+Step 8/8 : EXPOSE 8080
+ ---> Running in e2a4e0c2a4d7
+Removing intermediate container e2a4e0c2a4d7
+ ---> b780e0f2c1e2
+Successfully built b780e0f2c1e2
+Successfully tagged my-image:latest
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+b780e0f2c1e2        1 second ago        /bin/sh -c #(nop)  EXPOSE 8080                  0B
+a80616a080a2        1 second ago        /bin/sh -c #(nop)  CMD ["./entrypoint.sh"]      0B
+cae31b1cfc90        1 second ago        /bin/sh -c #(nop) WORKDIR /src                  0B
+95350e4054f5        2 seconds ago       /bin/sh -c mkdir /src                           0B
+30ba0561d16c        3 seconds ago       /bin/sh -c mkdir $BUNDLE_PATH                   0B
+121ae312016f        4 seconds ago       /bin/sh -c #(nop)  ENV BUNDLE_PATH=/box         0B
+f878b9c68bca        4 seconds ago       /bin/sh -c #(nop)  ENV NODE_PATH=/box           0B
+6f62c0cdc461        28 hours ago        /bin/sh -c #(nop)  CMD ["node"]                 0B
+<missing>           28 hours ago        /bin/sh -c set -ex   && for key in     6A010…   4.5MB
+<missing>           28 hours ago        /bin/sh -c #(nop)  ENV YARN_VERSION=1.9.4       0B
+<missing>           28 hours ago        /bin/sh -c ARCH= && dpkgArch="$(dpkg --print…   53.8MB
+<missing>           28 hours ago        /bin/sh -c #(nop)  ENV NODE_VERSION=8.12.0      0B
+<missing>           7 days ago          /bin/sh -c set -ex   && for key in     94AE3…   137kB
+<missing>           7 days ago          /bin/sh -c groupadd --gid 1000 node   && use…   335kB
+<missing>           7 days ago          /bin/sh -c set -ex;  apt-get update;  apt-ge…   320MB
+<missing>           7 days ago          /bin/sh -c apt-get update && apt-get install…   123MB
+<missing>           7 days ago          /bin/sh -c set -ex;  if ! command -v gpg > /…   0B
+<missing>           7 days ago          /bin/sh -c apt-get update && apt-get install…   41.1MB
+<missing>           8 days ago          /bin/sh -c #(nop)  CMD ["bash"]                 0B
+<missing>           8 days ago          /bin/sh -c #(nop) ADD file:8d73a09e59fe50289…   127MB
+timestamp: starting my-container
+timestamp: started 'npm install' at Wed Sep 12 20:56:50 UTC 2018
+npm WARN babel-plugin-debug-macros@0.2.0-beta.6 requires a peer of @babel/core@^7.0.0-beta.42 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+added 6 packages from 40 contributors and audited 50015 packages in 9.616s
+found 12 vulnerabilities (9 low, 3 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+timestamp: finished 'npm install' at Wed Sep 12 20:57:00 UTC 2018
+stopping the container as the goal to measure build and run times and not to build and run a service...
+timestamp: stop and start my-container
+timestamp: started 'npm install' at Wed Sep 12 20:57:01 UTC 2018
+npm WARN babel-plugin-debug-macros@0.2.0-beta.6 requires a peer of @babel/core@^7.0.0-beta.42 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+audited 50015 packages in 7.109s
+found 12 vulnerabilities (9 low, 3 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+timestamp: finished 'npm install' at Wed Sep 12 20:57:08 UTC 2018
+stopping the container as the goal to measure build and run times and not to build and run a service...
+timestamp: stop, rm and run my-container
+my-container
+timestamp: started 'npm install' at Wed Sep 12 20:57:09 UTC 2018
+npm WARN babel-plugin-debug-macros@0.2.0-beta.6 requires a peer of @babel/core@^7.0.0-beta.42 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+audited 50015 packages in 7.584s
+found 12 vulnerabilities (9 low, 3 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+timestamp: finished 'npm install' at Wed Sep 12 20:57:17 UTC 2018
+stopping the container as the goal to measure build and run times and not to build and run a service...
+my-container
+Untagged: my-image:latest
+Deleted: sha256:b780e0f2c1e2a8d17d1b1294839a37c178e0856b870074a8b6f0aed940ded001
+Deleted: sha256:a80616a080a2290356b96d214cf8880c896be11f462bb8f9b9d6d1a2cf5413af
+Deleted: sha256:cae31b1cfc90b923a788440c3cde14e389f67b097c3a4d9e7b56070407d84e79
+Deleted: sha256:95350e4054f5754891ca1605084e83e4739c7f5c9e3e2dcfe943b67fc0f3090c
+Deleted: sha256:db9042e8dd5a736f3655ff4ac68ec2a2800a91c0504d9da57b01a4f935591d96
+Deleted: sha256:30ba0561d16ccda40f196e2dbef43d40101d536411e322003bbaa1b3093049b5
+Deleted: sha256:87fa02029069f86370aacccdff1402c162e2afe6deb9f537684ae5f744f4e9e6
+Deleted: sha256:121ae312016f20bbdc970041c546edeeda9965d0de45fbd0ed4ec2cb8803029a
+Deleted: sha256:f878b9c68bcab0410e237788a1dc52481dcc94152434cce273abf78b693d5ddb
+
