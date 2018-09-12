@@ -11,4 +11,4 @@ RUN gem install bundler
 WORKDIR /src
 
 CMD ["./entrypoint.sh"]
-EXPOSE 9292
+EXPOSE 8080
