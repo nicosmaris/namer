@@ -1,10 +1,11 @@
-## Docker training demos for developers
+## Docker training for developers
 
-### Measure performance
+To save time as a ruby/js developer, cache libraries of the package manager with the following instructions:
 
-This folder shows you how to measure image size, time to build and time to start a service.
+1. Set the environment variables (GEM_PATH and GEM_HOME for ruby and NODE_PATH for javascript) to a folder that is not a docker bind mount
+2. Note that when using a volume, there is no need to use the command COPY at the Dockerfile with the same source and the same destination.
 
-Also, it shows you how to cache rubygem dependencies when starting a stopped container.
+### Image size, time to build and time to start a service
 
 Instructions:
 
